@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <f:view>
+
+
+            <b:form>
+                <h1><h:outputText value="List"/></h1>
+                <b:dataTable value="#{cuentasMb.personales}" var="item">
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="IdPersonal"/>
+                        </f:facet>
+                        <h:outputText value="#{item.idPersonal}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Nombres"/>
+                        </f:facet>
+                        <h:outputText value="#{item.nombres}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="Area"/>
+                        </f:facet>
+                        <h:outputText value="#{item.area}"/>
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">
+                            <h:outputText value="IdSucursal"/>
+                        </f:facet>
+                        <h:outputText value="#{item.idSucursal}"/>
+                    </h:column>
+                </b:dataTable>
+            </b:form>
+        </f:view>
+
+
+    </h:body>
+</html>
+
